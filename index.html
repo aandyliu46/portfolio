@@ -5,6 +5,44 @@
     <link href="images/linkedInPic.PNG" rel="icon" />
 
     <title> Andy Liu's portfolio</title>
+    <style>
+        body {
+            padding: 20px
+        }
+        spacing-it {
+            display: inline-block;
+            padding: 15px;
+            border: 1px solid #000000;
+            width: 30%; 
+
+          }
+    
+          spacing-it[pad="small"] {
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid #000000;
+            width: 10%; 
+          }
+          
+          spacing-it[pad="large"] {
+            display: inline-block;
+            padding: 25px;
+            border: 1px solid #000000;
+            width: 70%; 
+          }
+    
+    </style>
+
+    <script>
+        // Define the custom element
+        customElements.define('funny-message', class extends HTMLElement {
+            // Inherit from HTMLElement    
+            // Define connectedCallback directly
+            connectedCallback() {
+                console.log("Hleorl wold!");
+              }
+        });
+      </script>
 </head>
 
 <!-- Markup-->
@@ -15,13 +53,15 @@
             <h1>Andy Liu</h1>
             <p>Senior at UCSD and aspiring Software Engineer</p>
         </hgroup>
-        <nav>
-            <a href="experience.html"> Work Experience</a>
-            <a href="projects.html"> Projects</a>
-            <a href="clubs.html"> Campus Involvement</a>
-            <a href="contacts.html"> Contact Me!</a>
-
-        </nav>
+        <spacing-it>
+            <nav>
+                <a href="experience.html"> Work Experience</a>
+                <a href="projects.html"> Projects</a>
+                <a href="clubs.html"> Campus Involvement</a>
+                <a href="contacts.html"> Contact Me!</a>
+                <a href="experiments.html"> Experiments</a>
+            </nav>
+        </spacing-it>
     </header>
     <!-- main part of the home page -->
     <main>
@@ -31,6 +71,7 @@
 
         </picture>
 
+        <funny-message></funny-message>
 
         <h2>About Me</h2>
         <p>I'm Andy Liu, a senior at UC San Diego. I study mathematics-computer science! <br>
