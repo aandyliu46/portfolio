@@ -9,23 +9,29 @@
         <header> 
             <h1>Contact</h1>
             <nav>
+                <a href="index.html"> About Me</a>
                 <a href="experience.html"> Work Experience</a>
                 <a href="projects.html"> Projects</a>
-                <a href="clubs.html"> Campus Involvement</a>
-                <a href="contact.html"> Contact Me!</a>
-    
+                <a href="clubs.html"> Campus Involvement</a>    
             </nav>
         </header>
         <main>
-            <form id="form1">
-                <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject"><br>
-                <label for="Message">Message:</label><br>
-                <input type="text" id="message" name="message"><br>
-            </form>
+            <fieldset>
+                <form id="form1">
+                    <label for="subject">Subject:</label><br>
+                    <input type="text" id="subject" name="subject"><br>
+                    <label for="Message">Message:</label><br>
+                    <textarea id="Message">
+    
+                    </textarea>
+                </form>
+            </fieldset>
             <button type="Send" form="form1" value="Send">Send</button>
         <table>
             <caption>Other Contacts</caption>
+            <colgroup>
+                <col>
+            </colgroup>
             <tr>
               <th>Method</th>
             </tr>
