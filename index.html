@@ -2,27 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="images/linkedInPic.PNG" rel="icon" />
+    
     <title> Andy Liu's portfolio</title>
 </head>
 
 <!-- Markup-->
 <body>
+    <noscript>JavaScript is needed to run this site properly!</noscript>
     <header> 
         <h1>Andy Liu: Senior at UCSD and aspiring Software Engineer</h1>
+        <nav>
+            <a href="experience.html"> Work Experience</a>
+            <a href="projects.html"> Projects</a>
+            <a href="clubs.html"> Campus Involvement</a>
+            <a href="contact.html"> Contact Me!</a>
+
+        </nav>
     </header>
     <!-- main part of the home page -->
     <main>
-        <img src="images/linkedInPic.PNG" alt="Professional headshot">
+        <picture>
+            <source srcset="images/linkedInPic.PNG" media="(min-width: 800px)">
+            <img src="images/picMe.JPG" alt="Professional headshot">
+
+        </picture>
+
+
         <h2>About Me</h2>
-        <p>I'm Andy Liu, a senior at UC San Diego. I study mathematics-computer science! 
+        <p>I'm Andy Liu, a senior at UC San Diego. I study mathematics-computer science! <br>
             Right now, I'm looking for full-time software engineering roles for after my graduation. Like many others, 
-            my passion for computer science started from an interest in video games. Nowadays, I'm just intrigued by the complexity
-        and creativity that lies within computer science.</p>
+            my passion for computer science started from an interest in video games. <br> Nowadays, I'm just intrigued by the complexity
+        and creativity that lies within computer science.
+            <details>
+                <summary>Click here to learn more about me!</summary>
+                I grew up in Oakland, CA to immigrant Chinese parents. I have 3 sisters, and 2 half sisters! 
+            </details>
+        </p>
+        <!-- just trying out the div tag -->
+        <div class="aside">I'm from Oakland, CA!</div>
+        <hr>
         <h2>Technical Skills</h2>
-        <p> </p>
+        <p> Java, Python, C, C++, JavaScript, HTML, CSS, BootStrap, React, Git, Apex, R, MatLab</p>
+        <h2>Relevant CourseWork</h2>
+        <p> Computer Organization and Systems Programming, Software Engineering, Operating Systems, Wireless Embedded Systems, Wireless Networks, Computer Vision, Web Client Languages </p>
     </main>
     <footer>
-        <p>some text for now</p>
+        <a href="https://drive.google.com/file/d/1uNHqSdGuA4J4OKI3hglB1O49U0joC3Eg/view?usp=sharing">SiteMap</a>
     </footer>
 </body>
 
