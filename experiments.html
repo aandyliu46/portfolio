@@ -11,15 +11,15 @@
             <nav>
                 <a href="index.html"> Back to Main Site</a>
             </nav>
-        </header>
-
-        <main>
             <!-- search tag -->
             <search>
                 <form>
                   <input name="search" id="search" placeholder="Search experiments">
                 </form>
               </search>
+        </header>
+
+        <main>
 
             <!--    kbd -->
             <p>
@@ -51,28 +51,29 @@
             </audio>
 
             <!-- optgroup, select, option -->
-            <form >
+             <fieldset>
                 <legend>UCSD Classes</legend>
-                
-                <label for="classes">Choose a class:</label>
-                <select name="classes" id="classes">
-                  <optgroup label="CSE">
-                    <option value="110">CSE 110</option>
-                    <option value="112">CSE 112</option>
-                  </optgroup>
-                  <optgroup label="BILD">
-                    <option value="1">BILD 1</option>
-                    <option value="4">BILD 4</option>
-                  </optgroup>
-                </select>
-                <br><br>
-                <input type="submit" value="Submit">
-              </form>
+                <form >                
+                    <label for="classes">Choose a class:</label>
+                    <select name="classes" id="classes">
+                      <optgroup label="CSE">
+                        <option value="110">CSE 110</option>
+                        <option value="112">CSE 112</option>
+                      </optgroup>
+                      <optgroup label="BILD">
+                        <option value="1">BILD 1</option>
+                        <option value="4">BILD 4</option>
+                      </optgroup>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+             </fieldset>
 
               <br>
               <p>Now choose from these CSE classes</p>
               <!-- datalist -->
-              <input list="Classes2" id="Classes" name="Classes" />
+              <input list="Classes2" id="Classes" name="Classes">
               <datalist id="Classes2">
                 <option value="CSE 110"></option>
                 <option value="CSE 112"></option>
@@ -83,7 +84,7 @@
         <table>
             <caption>Other Contacts</caption>
             <colgroup>
-                <col span="1">
+                <col span="2">
             </colgroup>
                 <tr>
                     <th>Method</th>
