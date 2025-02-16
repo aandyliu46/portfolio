@@ -2,36 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="images/linkedInPic.PNG" rel="icon" />
+    <link href="images/AL.jpg" rel="icon" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <title> Andy Liu's portfolio</title>
-    <style>
-        body {
-            padding: 20px
-        }
-        spacing-it {
-            display: inline-block;
-            padding: 15px;
-            border: 1px solid #000000;
-            width: 30%; 
-
-          }
-    
-          spacing-it[pad="small"] {
-            display: inline-block;
-            padding: 5px;
-            border: 1px solid #000000;
-            width: 10%; 
-          }
-          
-          spacing-it[pad="large"] {
-            display: inline-block;
-            padding: 25px;
-            border: 1px solid #000000;
-            width: 70%; 
-          }
-    
-    </style>
 
     <script>
         // Define the custom element
@@ -43,6 +18,13 @@
               }
         });
       </script>
+      <style>
+        #about-me{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+      </style>
 </head>
 
 <!-- Markup-->
@@ -51,38 +33,41 @@
     <header> 
         <hgroup>
             <h1>Andy Liu 2</h1>
-            <p>Senior at UCSD and aspiring Software Engineer</p>
         </hgroup>
-        <spacing-it>
             <nav>
-                <a href="experience.html"> Work Experience</a>
-                <a href="projects.html"> Projects</a>
-                <a href="clubs.html"> Campus Involvement</a>
-                <a href="contacts.html"> Contact Me!</a>
+                <ul>
+                    <li style="background-color:rgb(186, 145, 224)"><a href="index.html" style="color:white"> About Me</a></li>
+                    <li><a href="experience.html"> Work Experience</a></li>
+                    <li><a href="projects.html"> Projects</a></li>
+                    <li><a href="clubs.html"> Campus Involvement</a></li>
+                </ul>
             </nav>
-        </spacing-it>
     </header>
     <!-- main part of the home page -->
     <main>
-        <picture>
-            <source srcset="images/linkedInPic.PNG" media="(min-width: 800px)">
-            <img src="images/picMe.JPG" alt="Professional headshot">
-
-        </picture>
-
         <funny-message></funny-message>
 
         <h2>About Me</h2>
-        <p>I'm Andy Liu, a senior at UC San Diego. I study mathematics-computer science! <br>
-            Right now, I'm looking for full-time software engineering roles for after my graduation. Like many others, 
-            my passion for computer science started from an interest in video games. <br> Nowadays, I'm just intrigued by the complexity
-        and creativity that lies within computer science.
+        <section id="about-me">
+                <p>I'm Andy Liu, a senior at UC San Diego studying Mathematics-Computer Science! <br>
+                    I've had the chance to explore my passion for computer science through my various classes and internships. <br>
+                    I've gained skills in both full-stack and embedded systems work, but am not limited to only that. I'm a fast and eager learner! &#129299;<br>
+                    Right now, I'm looking for full-time software engineering roles for after my graduation. <br>
+                    In my free time, I enjoy lifting weights, playing games, cooking, and spending quality time with friends and family! &#x1F600;<br>
+                </p>
+                <picture id="profilePic" style="padding: 1rem;">
+                    <source srcset="images/linkedInPic.PNG" media="(min-width: 800px)">
+                    <img src="images/picMe.JPG" alt="Professional headshot">
+        
+                </picture>
+
+        </section>
         <br>
         <address>
             4148 Camino Lita, San Diego 92122
         </address>
             <details>
-                <summary>Click here to learn more about me!</summary>
+                <summary>Personal Life and Journey</summary>
                 I grew up in Oakland, CA to immigrant Chinese parents. I have 3 sisters, and 2 half sisters! 
             </details>
         <!-- just trying out the div tag -->
