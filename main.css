@@ -71,7 +71,7 @@ p {
 }
 
 .exampleProj:has(img) {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 li {
