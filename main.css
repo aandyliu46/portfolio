@@ -4,18 +4,21 @@
 }
 
 :root{
+    --primary-color: #e1d5e1;
+}
 
+nav{
+    display: flex;
 }
 
 header{
     & nav {
-        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         /* TODO: change values to relative */
         /* margin: 2rem; */
-        border: 0.5rem solid rgb(232, 245, 219);
+        border: 0.5rem solid color-mix(in srgb, rgb(160, 221, 170), rgb(102, 99, 120));
         border-radius: 15px;
         /* padding: 0.5rem, 2rem; */
         margin: 0;
@@ -31,6 +34,11 @@ header{
                 margin: 1rem 1rem;
                 font-size: 1.5rem;
                 font-weight: 1.5rem;
+                &:hover {
+                    transform: scale(1.1);
+                    color: #ffcc00; /* Adjust color as needed */
+                    font-weight: bold;
+                }
             }
         }
     }  
@@ -39,20 +47,64 @@ header{
 
 
 body{
-    background-color:#e1d5e1;
+    background-color:var(--primary-color,color(display-p3 0.5 0.3 0.8));
     /* display: flex; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Playfair Display', serif;
-    /* margin: ; */
-    padding-left: 50rem;
-    padding-right: 50rem;
+    padding-left: 20dvw;
+    padding-right: 20dvw;
 
 }   
 
 p {
     font-size: 1.2rem;
     font-weight: 1.2rem;
+}
+
+.exampleProj {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exampleProj:has(img) {
+    flex-direction: column;
+}
+
+li {
+    margin-left: 3rem;
+}
+
+@media (max-width: 375px) {
+    nav ul{
+        Flex-direction: column;
+            
+    }
+    .exampleProj {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+    }
+
+}
+
+@media (min-width: 376px) and (max-width: 1024px) {    
+    body{
+        padding-left: 5dvw;
+        padding-right: 5dvw;
+    } 
+
+}
+
+img {
+    width: 80%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
 }
