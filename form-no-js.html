@@ -1,6 +1,4 @@
-<!-- no longer needed -->
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -23,18 +21,27 @@
             </nav>
         </header>
         <main>
-            <fieldset>
-                <form id="form1">
-                    <label for="subject">Subject:</label><br>
-                    <input type="text" id="subject" name="subject"><br>
-                    <label for="Message">Message:</label><br>
-                    <textarea id="Message">
-    
-                    </textarea>
+            <!-- <fieldset> -->
+                <form id="contactform" action="https://httpbin.org/post" method="POST">
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" maxlength="100"></textarea>
+
+                    <input type="hidden" name="possible_bot" value="true">
+
+                    <output id="error-message"></output>
+                    <output id="info-message"></output>
+                    <button type="submit" form="contactform" value="Submit">Send</button>
+
                 </form>
-            </fieldset>
-            <button type="submit" form="form1" value="Submit">Send</button>
-        <table>
+            <!-- </fieldset> -->
+        <!-- <table>
             <caption>Other Contacts</caption>
             <tr>
               <th>Method</th>
@@ -48,7 +55,7 @@
                 <td>Email</td>
                 <td>anl046@ucsd.edu</td>
               </tr>
-          </table>
+          </table> -->
         </main>
         <footer>
             <a href="https://www.linkedin.com/in/andy-liu-1091b31ab/" >
@@ -59,4 +66,4 @@
             </a>
         </footer>
     </body>
-</html> -->
+</html>

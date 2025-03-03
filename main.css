@@ -4,7 +4,7 @@
 }
 
 :root{
-    --primary-color: #e1d5e1;
+    --primary-color: #ffffff;
 }
 
 nav{
@@ -59,10 +59,22 @@ body{
 
 }   
 
-p {
+h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  p {
     font-size: 1.2rem;
-    font-weight: 1.2rem;
-}
+  }
+  
 
 .exampleProj {
     display: flex;
@@ -76,6 +88,22 @@ p {
 
 li {
     margin-left: 3rem;
+}
+
+
+#contactform {
+    display: grid;
+    gap: 0.2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3rem;
+}
+
+input:user-invalid  {
+    outline: 2px solid red;
+    background-color: ivory;
 }
 
 @media (max-width: 375px) {
@@ -104,7 +132,36 @@ img {
     width: 80%;
 }
 
-footer{
+footer{ 
     display: flex;
     flex-direction: row;
+}
+
+
+
+.animate {
+    color: rgb(0, 0, 0);
+    font-size: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-right: 4px solid var(--primary-color, rgb(143, 143, 192));
+    white-space: nowrap;
+    display: inline-block;
+    animation: typing 3s steps(16, end) 0.5s 1 normal both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 15em;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
