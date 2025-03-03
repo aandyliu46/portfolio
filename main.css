@@ -62,15 +62,15 @@ body{
     font-family: 'Playfair Display', serif;
     padding-left: 20dvw;
     padding-right: 20dvw;
-    color: var(--dark-text-color);
+    color: var(--dark-text-color), rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s ease;
     transition: color 0.5s ease;
-    visibility: hidden;
+        /* visibility: hidden; */
 }   
 
-body.theme-loaded {
+/* body.theme-loaded {
     visibility: visible;
-}
+} */
 
 h1 {
     font-size: 3rem;

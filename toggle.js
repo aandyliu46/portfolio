@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("theme");
     
-    // Make the button visible if JavaScript is enabled
     themeToggle.style.display = "block";
-    
+
     let darkMode = localStorage.getItem('theme') === 'dark';
 
     document.body.className = darkMode ? 'dark-mode' : 'light-mode';
