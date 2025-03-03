@@ -65,7 +65,12 @@ body{
     color: var(--dark-text-color);
     transition: background-color 0.5s ease;
     transition: color 0.5s ease;
+    visibility: hidden;
 }   
+
+body.theme-loaded {
+    visibility: visible;
+}
 
 h1 {
     font-size: 3rem;
