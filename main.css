@@ -5,6 +5,11 @@
 
 :root{
     --primary-color: #ffffff;
+    --secondary-color: #3b194c;
+    --dark-primary-color: #242539;
+    --dark-secondary-color: #c6c3dc;
+    --dark-text-color: #000000;
+    --light-text-color: #e4d3d3;
 }
 
 nav{
@@ -18,7 +23,7 @@ header{
         justify-content: center;
         /* TODO: change values to relative */
         /* margin: 2rem; */
-        border: 0.5rem solid color-mix(in srgb, rgb(160, 221, 170), rgb(102, 99, 120));
+        border: 0.5rem solid var(--secondary-color);
         border-radius: 15px;
         /* padding: 0.5rem, 2rem; */
         margin: 0;
@@ -42,6 +47,7 @@ header{
             }
         }
     }  
+
 }   
 
 
@@ -56,7 +62,9 @@ body{
     font-family: 'Playfair Display', serif;
     padding-left: 20dvw;
     padding-right: 20dvw;
-
+    color: var(--dark-text-color);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
 }   
 
 h1 {
@@ -140,7 +148,7 @@ footer{
 
 
 .animate {
-    color: rgb(0, 0, 0);
+    color: var(--dark-text-color);
     font-size: 1.7rem;
     margin-top: 0;
     margin-bottom: 0;
@@ -165,3 +173,19 @@ footer{
         border-color: transparent;
     }
 }
+
+@keyframes flash {
+    50% { background-color: rgba(255, 0, 0, 0.3); }
+  }
+
+
+
+  .light-mode {
+    background-color: var(--primary-color,color(display-p3 0.5 0.3 0.8));
+    color: var(--dark-text-color);
+  }
+  
+  .dark-mode {
+    background-color: var(--dark-primary-color);
+    color: var(--light-text-color);
+  }
