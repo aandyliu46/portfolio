@@ -15,11 +15,12 @@ class ProjectCard extends HTMLElement {
             display: flex;
             flex-direction: column;
             align-items: center;
+            border-radius: 25px;
             justify-content: center;
             border: .25rem solid black;
             margin: auto;
-            padding: 2rem;
             text-align: center;
+            box-sizing: border-box;
         `;
         
         // const h3Style =`
@@ -27,11 +28,15 @@ class ProjectCard extends HTMLElement {
         // `;
 
         this.innerHTML = `
-            <div style="${style}"> 
-                <h3>${title}</h3>
-                <picture><img src="${projImg}" alt="${imgAlt}" width ="500" height = "500"></picture>
-                <p>${description}</p>
-                <a href="${projURL}">GitHub Repo</a>
+            <div style="${style}">
+                <div class="front"> 
+                    <picture><img src="${projImg}" alt="${imgAlt}" width ="500" height = "500"></picture>
+                </div> 
+                <div class="back"> 
+                        <h3>${title}</h3>
+                        <p>${description}</p>
+                        <a href="${projURL}">GitHub Repo</a>
+                </div>
             </div>
         `;
     }
