@@ -1,41 +1,41 @@
 class ProjectCard extends HTMLElement {
-    constructor(){
+    constructor() {
         super();
     }
 
-    connectedCallback(){
-        // attributes
-        const description = 'This is one of my projects!';
-        const projImg = 'imgPath';
-        const imgAlt = 'pic of my project';
-        const projURL = 'github/aandyliu46';
+    connectedCallback() {
+        // Get attributes from the element or use defaults
+        const title = this.getAttribute('title') || 'Project';
+        const description = this.getAttribute('description') || 'This is one of my projects!';
+        const projImg = this.getAttribute('projImg') || 'imgPath';
+        const imgAlt = this.getAttribute('imgAlt') || 'pic of my project';
+        const projURL = this.getAttribute('projURL') || '#';
     
         const style = `
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: fit-content;
             border: .25rem solid black;
             margin: auto;
             padding: 2rem;
             text-align: center;
-            width: 50vw;
         `;
         
         // const h3Style =`
         //     font-size: 1.3rem;
         // `;
 
-        this.innerHTML= `
+        this.innerHTML = `
             <div style="${style}"> 
-            <h3> Project: </h3>
-            <picture> <img src="${projImg}" alt="${imgAlt}"> </picture>
-            <p> ${description}</p>
-            <a href = ${projURL}>Click Here to See More!</a>
+                <h3>${title}</h3>
+                <picture><img src="${projImg}" alt="${imgAlt}" width ="500" height = "500"></picture>
+                <p>${description}</p>
+                <a href="${projURL}">GitHub Repo</a>
             </div>
-            `
+        `;
     }
 }
 
-customElements.define('project-card', ProjectCard)
+// Make sure the component name matches what you use in HTML
+customElements.define('project-card', ProjectCard);
