@@ -4,7 +4,12 @@ class ProjectCard extends HTMLElement {
     }
 
     connectedCallback(){
-        // remember to add flex to the style.
+        // attributes
+        const description = 'This is one of my projects!';
+        const projImg = 'imgPath';
+        const imgAlt = 'pic of my project';
+        const projURL = 'github/aandyliu46';
+    
         const style = `
             display: flex;
             flex-direction: row;
@@ -18,19 +23,19 @@ class ProjectCard extends HTMLElement {
             width: 50vw;
         `;
         
-        const h3Style =`
-            font-size: 1.3rem;
-        `;
+        // const h3Style =`
+        //     font-size: 1.3rem;
+        // `;
 
         this.innerHTML= `
             <div style="${style}"> 
-            <h3 style="${h3Style}"> Project: </h3>
-            <picture> </picture>
-            <p> </p>
-            <a href = >
+            <h3> Project: </h3>
+            <picture> <img src="${projImg}" alt="${imgAlt}"> </picture>
+            <p> ${description}</p>
+            <a href = ${projURL}>Click Here to See More!</a>
             </div>
             `
     }
 }
 
-CustomElementRegistry.define('project-card', ProjectCard)
+customElements.define('project-card', ProjectCard)
