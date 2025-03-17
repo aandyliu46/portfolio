@@ -6,6 +6,7 @@
 :root{
     --primary-color: #ffffff;
     --secondary-color: #3b194c;
+    --third-color: rgb(186, 145, 224);
     --dark-primary-color: #242539;
     --dark-secondary-color: #c6c3dc;
     --dark-text-color: #000000;
@@ -38,14 +39,27 @@ header{
             & li {
                 display: flex;
                 /* TODO: change values */
-                margin: 1rem 1rem;
+                margin: 0rem 0rem;
                 font-size: 1.5rem;
                 font-weight: 1.5rem;
-                &:hover {
-                    transform: scale(1.1);
-                    color: #ffcc00; /* Adjust color as needed */
-                    font-weight: bold;
-                }
+                & a {
+                    display: block;
+                    text-decoration: none;
+                    color: var(--secondary-color);
+                    /* background-color: var(--primary-color); */
+                    padding: 0.5rem 1rem; 
+                    border-radius: 0px;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        transform: scale(1.02);
+                        font-weight: bold;
+                    }
+                    
+                    &:visited {
+                        color:var(--secondary-color); 
+                    }
+                } 
             }
         }
     }  
@@ -185,13 +199,15 @@ footer{
     50% { background-color: rgba(255, 0, 0, 0.3); }
   }
 
-  /* .error-message {
-    animation: flash 3s steps(16, end) 0.5s 1 
-  } */
-
   .light-mode {
     background-color: var(--primary-color,color(display-p3 0.5 0.3 0.8));
     color: var(--dark-text-color);
+    nav{
+        & a {
+            background-color: var(--primary-color);
+            color: var(--dark-text-color);
+        }
+    }
   }
   
   .dark-mode {
@@ -199,5 +215,11 @@ footer{
     color: var(--light-text-color);
     #githubimg {
         filter: invert(1);
+    }
+    nav{
+        & a {
+            background-color: var(--light-text-color);
+            color: var(--light-text-color);
+        }
     }
   }

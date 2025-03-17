@@ -78,7 +78,7 @@ class ProjectCard extends HTMLElement {
                     <div class="front">
                         <img src="${projImg}" alt="${imgAlt}">
                     </div>
-                    <div class="back">
+                    <div class="back" style="color:black">
                         <h3>${title}</h3>
                         <p>${description}</p>
                         <a href="${projURL}" target="_blank">GitHub Repo</a>
