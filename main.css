@@ -20,6 +20,10 @@ nav{
 
 
 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
     & nav {
         flex-direction: row;
         align-items: center;
@@ -30,6 +34,8 @@ header{
         border-radius: 15px;
         /* padding: 0.5rem, 2rem; */
         margin: 0;
+        margin-right: 0.15rem;
+
         width: fit-content;
         & ul {
             display: flex;
