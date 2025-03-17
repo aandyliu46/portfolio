@@ -197,4 +197,7 @@ footer{
   .dark-mode {
     background-color: var(--dark-primary-color);
     color: var(--light-text-color);
+    #githubimg {
+        filter: invert(1);
+    }
   }

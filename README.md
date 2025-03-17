@@ -1,1 +1,4 @@
 # portfolio
+# Additional Enhancements:
+# I removed the contact forms. If someone were to look at my site, the traffic would be coming from LinkedIn or an internal database with candidates, so a contact form is unnecessary and clunky. It just makes more sense for someone to connect with me on LinkedIn or email.
+# As far as other enhancements, I fixed my site so that its rid of spelling errors. Im expanding on the actual content of my site, as well as pruning random elements so that the site has a cleaner look (u can check my old deployment here and compare, i think its a pretty major difference)
