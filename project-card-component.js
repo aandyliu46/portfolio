@@ -1,6 +1,8 @@
 class ProjectCard extends HTMLElement {
     constructor() {
         super();
+        // Create a shadow root
+        this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
@@ -69,7 +71,6 @@ class ProjectCard extends HTMLElement {
                 padding: 20px;
                 justify-content: center;
             }
-
         `;
         
         const cardHTML = `
@@ -87,8 +88,11 @@ class ProjectCard extends HTMLElement {
             </div>
         `;
         
-        this.appendChild(style);
-        this.innerHTML += cardHTML;
+        // Append the style and HTML to the shadow root instead of directly to the element
+        this.shadowRoot.appendChild(style);
+        const template = document.createElement('template');
+        template.innerHTML = cardHTML;
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 }
 
