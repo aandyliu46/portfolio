@@ -29,7 +29,7 @@
      "type":"EmbeddedSystems",
      "title":"Apple AirTag",
      "description":"I used an STM32 Microcontroller to recreate the functionality of an airtag. The airtag sends BLE requests after being inactive for a minute, but turns it off once it is found. The main technical challenges were writing the I2C code to interface with the accelermeter, as well as understanding how to implement BLE functionality.",
-     "projImg":"images/airRobotCar.png",
+     "projImg":"images/airtagProj.jpg",
      "imgAlt":"Picture of the App",
      "projURL":"https://github.com/ucsd-cse190b-w25/project-3-adding-low-energy-radio-communication-g22"  
     }

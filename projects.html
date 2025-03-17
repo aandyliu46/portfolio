@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <link href="images/AL.svg" rel="icon" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -27,13 +28,13 @@
 
     <main>
         <script type="module" src="./project-card-component.js"></script>
+        <input type="button" value="getLocal" id="localButton">
+        <input type="button" value="getRemote" id="remoteButton">
         <section id = "fullstackProjects">
-            <input type="button" value="getLocal" id="localButton">
-            <input type="button" value="getRemote" id="remoteButton">
             <h2>
                 FullStack
             </h2>
-            <project-card></project-card>
+            <!-- <project-card></project-card> -->
             <!-- <aside>
                 All of these projects can be found on my GitHub repo!
             </aside> -->
@@ -45,50 +46,16 @@
             <h2>
                 Embedded Systems
             </h2>
-            <ul>
-                <li>
-                    <h3>
-                        CSE 147 Raspberry Pi Project
-                    </h3>
-                    <section class="exampleProj">
-                        <ul>
-                            <li>currently taking class, placeholder text</li>
-                            <li>currently taking class, placeholder text</li>
-                        </ul>
-                        <picture id="raspberryPi" style="padding: 1rem;">
-                            <img src="images/raspberry-pi-5.webp" alt="Raspberry Pi">
-                
-                        </picture>
-                    </section>
-                </li>
-                <li>
-                    <h3>
-                        CSE 190 airtag project
-                    </h3>
-                    <section class="exampleProj">
-
-                    <ul>
-                        <li></li>
-                        <li>currently taking class, placeholder text</li>
-                    </ul>
-                    <picture id="airTag" style="padding: 1rem;">
-                        <img src="images\Microcontroller-Chip-PNG-Clipart.png" alt="airTag">
-            
-                    </picture>
-                    </section>
-
-                </li>    
-            </ul>
         </section>
         <script src="toggle.js"></script>
 
     </main>
 
     <footer>
-        <a href="https://www.linkedin.com/in/andy-liu-1091b31ab/" >
+        <a href="https://www.linkedin.com/in/andy-liu-1091b31ab/" target="_blank">
             <img src="images/linkedin-icon.svg" alt="LinkedIn" width="40" height="40">
         </a>
-        <a href="https://github.com/aandyliu46">
+        <a href="https://github.com/aandyliu46" target="_blank">
             <img src="images/github.svg" alt="LinkedIn" width="40" height="40">
         </a>
     </footer>

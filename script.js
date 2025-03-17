@@ -1,15 +1,16 @@
 window.addEventListener('DOMContentLoaded', function(){
-
+    console.log("here")
     // initLocalData()
-    this.document.getElementById("localButton").addEventListener('click', function () { sendLocalRequest});
+    document.getElementById("localButton").addEventListener('click', function () { sendRequest("db.json")});
     
-    this.document.getElementById("remoteButton").addEventListener('click', function () {sendRemoteRequest});
+    document.getElementById("remoteButton").addEventListener('click', function () {sendRequest('https://my-json-server.typicode.com/aandyliu46/portfolioDB')});
 
 });
 
-function sendLocalRequest() {
+function sendRequest(path) {
+    console.log("buttonClicked")
     if (localStorage.getItem('projectData') == null) {
-        fetch('db.json')
+        fetch(path)
         .then(response => {
             if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -17,16 +18,23 @@ function sendLocalRequest() {
             return response.json();
         })
         .then(projectData => {
-            localStorage.setItem(projectData, JSON.stringify(projectData));
+            localStorage.setItem('projectData', JSON.stringify(projectData));
+            processData();
         })
     }
+    else{
+        processData();
+    }
+    
+}
 
+function processData() {
     const projectData = JSON.parse(localStorage.getItem('projectData'));
     let fullStack = document.getElementById('fullstackProjects');
     let embedded = document.getElementById('embeddedProjects');
     fullStack.innerHTML = '';
     embedded.innerHTML = '';
-
+    console.log(projectData)
     projectData.forEach(project => {
         const projectCard = createProjectCard(project)
         if (project.type == "Fullstack") {
@@ -40,7 +48,6 @@ function sendLocalRequest() {
             console.log("wrong type")
         }
     });
-    
 }
 
 function sendRemoteRequest() {
