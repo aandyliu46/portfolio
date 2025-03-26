@@ -88,7 +88,6 @@ class ProjectCard extends HTMLElement {
             </div>
         `;
         
-        // Append the style and HTML to the shadow root instead of directly to the element
         this.shadowRoot.appendChild(style);
         const template = document.createElement('template');
         template.innerHTML = cardHTML;

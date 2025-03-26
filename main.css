@@ -56,7 +56,8 @@ header{
                     padding: 0.5rem 1rem; 
                     border-radius: 0px;
                     transition: all 0.3s ease;
-                    
+                    /* try this to prevent that weird thing */
+                    white-space: nowrap;
                     &:hover {
                         transform: scale(1.02);
                         font-weight: bold;
@@ -124,7 +125,7 @@ h1 {
 li {
     margin-left: 3rem;
 }
-
+/* list-style-position: inside; */
 
 #contactform {
     display: grid;
