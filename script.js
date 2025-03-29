@@ -1,10 +1,10 @@
 window.addEventListener('DOMContentLoaded', function(){
     console.log("here")
     // would be better to fetch resources here so on click its faster, but its trivial for the amnt of resources I have.
-    document.getElementById("localButton").addEventListener('click', function () { sendRequest("db.json")});
+    // document.getElementById("localButton").addEventListener('click', function () { sendRequest("db.json")});
     
-    document.getElementById("remoteButton").addEventListener('click', function () {sendRequest('https://my-json-server.typicode.com/aandyliu46/portfolioDB')});
-
+    // document.getElementById("remoteButton").addEventListener('click', function () {sendRequest('https://my-json-server.typicode.com/aandyliu46/portfolioDB')});
+    sendRequest("db.json")
 });
 
 function sendRequest(path) {

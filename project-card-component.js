@@ -71,6 +71,22 @@ class ProjectCard extends HTMLElement {
                 padding: 20px;
                 justify-content: center;
             }
+
+            .back a {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #007bff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            .back a:hover {
+                background-color: #0056b3;
+            }
         `;
         
         const cardHTML = `
