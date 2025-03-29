@@ -1,0 +1,36 @@
+[
+    {
+     "type":"Fullstack",
+     "title":"PantryPal Java Application",
+     "description":"For my Software Engineering class, we created a recipe book app using primarily Java. I implemented dynamic recipe generation and human input speech through RESTful API calls using JSON to OpenAI API.I led architecture design using Model-View-Controller creating a scalable and understandable object oriented codebase. I worked on front-end code as well, replicating what our team had designed.",
+     "projImg":"images/pantryPal.png",
+     "imgAlt":"Picture of the App",
+     "projURL":"https://github.com/ucsd-cse110-fa23/cse-110-project-team-34"  
+    },
+    {
+     "type":"Fullstack",
+     "title":"NoteWorthy Web Application",
+     "description":"In my Advanced Software Engineering class, I co-led my team to work on an existing website. I helped resolve interpersonal conflicts and helped guide some technical decisions. I implemented a local nonsql database to categorize notes using IndexedDB, as well as integrate the front-end and back-end components to make this feature work flawlessly. My group received an A on our project!",
+     "projImg":"images/noteWorthy.png",
+     "imgAlt":"Picture of the App",
+     "projURL":"https://github.com/cse112-sp24-group2/NoteWorthy"  
+    },
+   
+    {
+     "type":"EmbeddedSystems",
+     "title":"Air Circulation Robot",
+     "description":"Using a Raspberry Pi 5 and some hardware sensors, my teammate and I created a robot that can autonomously navigate a room and improve air quality. I used the BreezySLAM library to map out a room while gathering information about temperature and air quality at each location. With that information, the robot revisits spots with the poorest air quality, actuating a fan and negative ion generator to improve it.",
+     "projImg":"images/airRobotCar.png",
+     "imgAlt":"Picture of the App",
+     "projURL":"https://github.com/jxnlee/Air-Quality-Robot"  
+    },
+   
+     {
+     "type":"EmbeddedSystems",
+     "title":"Apple AirTag",
+     "description":"I used an STM32 Microcontroller to recreate the functionality of an airtag. The airtag sends BLE requests after being inactive for a minute, but turns it off once it is found. The main technical challenges were writing the I2C code to interface with the accelermeter, as well as understanding how to implement BLE functionality.",
+     "projImg":"images/airtagProj.jpg",
+     "imgAlt":"Picture of the App",
+     "projURL":"https://github.com/ucsd-cse190b-w25/project-3-adding-low-energy-radio-communication-g22"  
+    }
+   ]

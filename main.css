@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #3b194c;
+    --third-color: rgb(186, 145, 224);
+    --dark-primary-color: #242539;
+    --dark-secondary-color: #c6c3dc;
+    --dark-text-color: #000000;
+    --light-text-color: #e4d3d3;
+}
+
+nav{
+    display: flex;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    & nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* TODO: change values to relative */
+        /* margin: 2rem; */
+        border: 0.5rem solid var(--secondary-color);
+        border-radius: 15px;
+        /* padding: 0.5rem, 2rem; */
+        margin: 0;
+        margin-right: 0.15rem;
+
+        width: fit-content;
+        & ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            & li {
+                display: flex;
+                /* TODO: change values */
+                margin: 0rem 0rem;
+                font-size: 1.5rem;
+                font-weight: 1.5rem;
+                & a {
+                    display: block;
+                    text-decoration: none;
+                    color: var(--secondary-color);
+                    /* background-color: var(--primary-color); */
+                    padding: 0.5rem 1rem; 
+                    border-radius: 0px;
+                    transition: all 0.3s ease;
+                    /* try this to prevent that weird thing */
+                    white-space: nowrap;
+                    &:hover {
+                        transform: scale(1.02);
+                        font-weight: bold;
+                    }
+                    
+                    &:visited {
+                        color:var(--secondary-color); 
+                    }
+                } 
+            }
+        }
+    }  
+
+}   
+
+
+
+body{
+    background-color:var(--dark-primary-color,color(display-p3 0.5 0.3 0.8));
+    color: var(--light-text-color);
+    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    padding-left: 20dvw;
+    padding-right: 20dvw;
+    color: var(--dark-text-color), rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+        /* visibility: hidden; */
+}   
+
+/* body.theme-loaded {
+    visibility: visible;
+} */
+
+h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+
+.blurb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blurb:has(img) {
+    flex-direction: row;
+}
+
+li {
+    margin-left: 3rem;
+}
+/* list-style-position: inside; */
+
+#contactform {
+    display: grid;
+    gap: 0.2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3rem;
+}
+
+input:user-invalid  {
+    outline: 2px solid red;
+    background-color: ivory;
+}
+
+@media (max-width: 375px) {
+    nav ul{
+        Flex-direction: column;
+            
+    }
+    .blurb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+    }
+
+}
+
+@media (min-width: 376px) and (max-width: 1024px) {    
+    body{
+        padding-left: 5dvw;
+        padding-right: 5dvw;
+    } 
+
+}
+
+img {
+    width: 80%;
+}
+
+footer{ 
+    display: flex;
+    flex-direction: row;
+}
+
+
+.proj {
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: space-between;
+}
+
+
+.animate {
+    color: var(--dark-text-color);
+    font-size: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-right: 4px solid var(--primary-color, rgb(143, 143, 192));
+    white-space: nowrap;
+    display: inline-block;
+    animation: typing 3s steps(16, end) 0.5s 1 normal both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 15em;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes flash {
+    50% { background-color: rgba(255, 0, 0, 0.3); }
+  }
+
+  .light-mode {
+    background-color: var(--primary-color,color(display-p3 0.5 0.3 0.8));
+    color: var(--dark-text-color);
+    nav{
+        & a {
+            background-color: var(--primary-color);
+            color: var(--dark-text-color);
+        }
+    }
+  }
+  
+  .dark-mode {
+    background-color: var(--dark-primary-color);
+    color: var(--light-text-color);
+    #githubimg {
+        filter: invert(1);
+    }
+    nav{
+        & a {
+            background-color: var(--light-text-color);
+            /* color: var(--light-text-color); */
+        }
+    }
+  }

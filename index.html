@@ -2,101 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="images/linkedInPic.PNG" rel="icon" />
-
+    <link href="images/AL.svg" rel="icon" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title> Andy Liu's portfolio</title>
-    <style>
-        body {
-            padding: 20px
-        }
-        spacing-it {
-            display: inline-block;
-            padding: 15px;
-            border: 1px solid #000000;
-            width: 30%; 
 
-          }
-    
-          spacing-it[pad="small"] {
-            display: inline-block;
-            padding: 5px;
-            border: 1px solid #000000;
-            width: 10%; 
-          }
-          
-          spacing-it[pad="large"] {
-            display: inline-block;
-            padding: 25px;
-            border: 1px solid #000000;
-            width: 70%; 
-          }
-    
-    </style>
-
-    <script>
-        // Define the custom element
-        customElements.define('funny-message', class extends HTMLElement {
-            // Inherit from HTMLElement    
-            // Define connectedCallback directly
-            connectedCallback() {
-                console.log("Hleorl wold!");
-              }
-        });
-      </script>
 </head>
 
 <!-- Markup-->
 <body>
-    <noscript>JavaScript is needed to run this site properly!</noscript>
+    <noscript>JavaScript is needed to run this site properly! Cant change site Theme</noscript>
     <header> 
-        <hgroup>
-            <h1>Andy Liu</h1>
-            <p>Senior at UCSD and aspiring Software Engineer</p>
-        </hgroup>
-        <spacing-it>
             <nav>
-                <a href="experience.html"> Work Experience</a>
-                <a href="projects.html"> Projects</a>
-                <a href="clubs.html"> Campus Involvement</a>
-                <a href="contacts.html"> Contact Me!</a>
-                <a href="experiments.html"> Experiments</a>
+                
+                <ul>
+                    <li><a href="index.html" style="background-color: rgb(186, 145, 224); border-top-left-radius: 5px; border-bottom-left-radius: 5px  "> About Me</a></li>
+                    <li><a href="experience.html"> Work Experience</a></li>
+                    <li><a href="projects.html"> Projects</a></li>
+                    <li><a href="clubs.html"> Student Activities</a></li>
+                </ul>
             </nav>
-        </spacing-it>
+            <img id="theme" src="images/toggle.png" alt="Toggle Theme" style="display:none; cursor: pointer; width: 40px; height: 40px;">
+
     </header>
     <!-- main part of the home page -->
     <main>
-        <picture>
-            <source srcset="images/linkedInPic.PNG" media="(min-width: 800px)">
-            <img src="images/picMe.JPG" alt="Professional headshot">
 
-        </picture>
-
-        <funny-message></funny-message>
-
+        <!-- <h2 class="animate">About Me</h2> -->
         <h2>About Me</h2>
-        <p>I'm Andy Liu, a senior at UC San Diego. I study mathematics-computer science! <br>
-            Right now, I'm looking for full-time software engineering roles for after my graduation. Like many others, 
-            my passion for computer science started from an interest in video games. <br> Nowadays, I'm just intrigued by the complexity
-        and creativity that lies within computer science.
+
+        <section class="blurb">
+                <p>I'm Andy Liu, a senior at UC San Diego studying Mathematics-Computer Science! <br>
+                    I've had the chance to explore my passion for computer science through my various classes and internships. <br>
+                    I've gained skills in both full-stack and embedded systems work, but am not limited to only that. I'm a fast and eager learner! &#129299;<br>
+                    Right now, I'm looking for full-time software engineering roles for after my graduation. <br>
+                    In my free time, I enjoy lifting weights, playing games, cooking, and spending quality time with friends and family! &#x1F600;<br>
+                </p>
+                <picture id="profilePic" style="padding: 1rem;">
+                    <source srcset="images/linkedInPic.PNG" media="(min-width: 800px)">
+                    <img src="images/picMe.JPG" alt="Professional headshot">
+        
+                </picture>
+
+        </section>
         <br>
-        <address>
-            4148 Camino Lita, San Diego 92122
-        </address>
+        <div style="display: flex; gap: 5px; align-items: center;">
+            <p style="font-size: 1rem; margin: 0;">School Address:</p>
+            <address style="margin: 0;">4148 Camino Lita, San Diego 92122</address>
+        </div>
+        <div style="display: flex; gap: 5px; align-items: center;">
+            <p style="font-size: 1rem; margin: 0;">Permanent Address:</p>
+            <address style="margin: 0;">283 13th Street Apt 329 Oakland, CA 94612</address>
+        </div>
+        
             <details>
-                <summary>Click here to learn more about me!</summary>
+                <summary>Personal Life and Journey</summary>
                 I grew up in Oakland, CA to immigrant Chinese parents. I have 3 sisters, and 2 half sisters! 
+                Although I'm very familiar with how technologies work nowadays, this was not always the case for me. I used to be afraid 
+                of messing around with the inner workings of a computer, always scared I would break something. I was also scared of not 
+                knowing what I was doing. I hated that feeling and wanted to conquer it. I started taking computer science classes, and while that 
+                feeling is still there sometimes, I've learned to embrace it. Whenever I get that feeling, its a sign that I have to dig 
+                deeper into what I'm learning. Like Jeff Bezos famously said, stress is caused by inaction. 
             </details>
-        <!-- just trying out the div tag -->
-        <div class="aside">I'm from Oakland, CA!</div>
         <hr>
-        <h2>Technical Skills</h2>
+        <h3>Technical Skills</h3>
         <p> Java, Python, C, C++, JavaScript, HTML, CSS, BootStrap, React, Git, Apex, R, MatLab</p>
-        <h2>Relevant CourseWork</h2>
+        <h3>Relevant CourseWork</h3>
         <p> Computer Organization and Systems Programming, Software Engineering, Operating Systems, Wireless Embedded Systems, Wireless Networks, Computer Vision, Web Client Languages </p>
     </main>
     <footer>
-        <a href="https://drive.google.com/file/d/1uNHqSdGuA4J4OKI3hglB1O49U0joC3Eg/view?usp=sharing">SiteMap</a>
+        <a href="https://www.linkedin.com/in/andy-liu-1091b31ab/" >
+            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="40" height="40">
+        </a>
+        <a href="https://github.com/aandyliu46">
+            <img src="images/github.svg" alt="Github" width="40" height="40" id="githubimg">
+        </a>
     </footer>
+    <script src="toggle.js"></script>
+
 </body>
 
 </html>
